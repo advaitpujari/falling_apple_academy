@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getPlaceholderImage } from '@/lib/placeholder-images';
-import { BrainCircuit } from 'lucide-react';
 
 const BentoCard = ({ className, children, id }: { className?: string; children: React.ReactNode, id?: string }) => (
   <Card id={id} className={`bg-card/50 backdrop-blur-sm border-white/10 rounded-[30px] overflow-hidden transition-all duration-300 hover:border-primary/50 ${className}`}>
@@ -51,9 +50,13 @@ export function BentoGridSection() {
               <CardTitle className="text-2xl font-bold">AI Test Series</CardTitle>
             </CardHeader>
             <CardContent className="p-8 pt-0 flex flex-col items-center justify-center text-center">
-              <div className="relative w-24 h-24 mb-4">
-                  <BrainCircuit className="w-24 h-24 text-primary" />
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse" />
+              <div className="relative w-48 h-48 mb-4">
+                  <Image
+                    src="https://jee-data.s3.ap-south-1.amazonaws.com/falling_apple_academy_website/test_series_image.png"
+                    alt="AI Test Series"
+                    fill
+                    className="object-contain"
+                  />
               </div>
               <p className="font-semibold">Smart Testing.</p>
               <p className="text-muted-foreground">AI that finds your weak spots before the exam does.</p>
