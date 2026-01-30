@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A dark, atmospheric shot of a single apple floating in space-like environment",
+      "imageUrl": "https://images.unsplash.com/photo-1628796867500-009f87dcf976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhcHBsZSUyMGZsb2F0aW5nfGVufDB8fHx8MTc2OTc2Nzk1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "apple floating"
+    },
+    {
+      "id": "bento-micro-batch",
+      "description": "A neon visualization of a magnetic field on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1540974195715-681a4872dd65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWduZXRpYyUyMGZpZWxkfGVufDB8fHx8MTc2OTc2Nzk1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magnetic field"
+    },
+    {
+      "id": "bento-materials",
+      "description": "A sleek render of an iPad displaying handwritten physics notes.",
+      "imageUrl": "https://images.unsplash.com/photo-1443140703170-9421cf8b526b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpcGFkJTIwbm90ZXN8ZW58MHx8fHwxNzY5NzY3OTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ipad notes"
+    },
+    {
+      "id": "carousel-optics",
+      "description": "A glass prism refracting light into a rainbow.",
+      "imageUrl": "https://images.unsplash.com/photo-1594843470392-f2ded00c645b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnbGFzcyUyMHByaXNtfGVufDB8fHx8MTc2OTc2Nzk1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glass prism"
+    },
+    {
+      "id": "carousel-mechanics",
+      "description": "A detailed illustration of interconnected gears and pulleys.",
+      "imageUrl": "https://images.unsplash.com/photo-1702664469080-ebd48fd8e9fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnZWFycyUyMHB1bGxleXxlbnwwfHx8fDE3Njk3Njc5NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gears pulley"
+    },
+    {
+      "id": "carousel-thermodynamics",
+      "description": "A vibrant heat map visualization.",
+      "imageUrl": "https://images.unsplash.com/photo-1765410847873-a9bee6e4ddbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxoZWF0JTIwbWFwfGVufDB8fHx8MTc2OTc2Nzk1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "heat map"
+    }
+  ]
 }
