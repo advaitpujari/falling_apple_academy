@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { FallingAppleLogo } from '@/components/icons/falling-apple-logo';
 
 export function Footer() {
   return (
@@ -43,7 +42,7 @@ export function Footer() {
       </div>
       <div className="container mx-auto mt-12 border-t border-border pt-8 px-4 flex justify-between items-center text-muted-foreground text-xs">
         <p>&copy; {new Date().getFullYear()} Falling Apple Academy. All rights reserved.</p>
-        <p>Physics by Swarupanand.</p>
+        <p>Physics by <strong>Swarupanand</strong>.</p>
       </div>
     </footer>
   );

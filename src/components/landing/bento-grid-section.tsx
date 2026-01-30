@@ -49,17 +49,17 @@ export function BentoGridSection() {
             <CardHeader className="p-8">
               <CardTitle className="text-2xl font-bold">AI Test Series</CardTitle>
             </CardHeader>
-            <CardContent className="p-8 pt-0 flex flex-col items-center justify-center text-center">
-              <div className="relative w-48 h-48 mb-4">
-                  <Image
-                    src="https://jee-data.s3.ap-south-1.amazonaws.com/falling_apple_academy_website/test_series_image.png"
-                    alt="AI Test Series"
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
-                  />
+            <CardContent className="p-0 relative h-[300px]">
+                <Image
+                  src="https://jee-data.s3.ap-south-1.amazonaws.com/falling_apple_academy_website/test_series_image.png"
+                  alt="AI Test Series"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                <p className="text-lg font-semibold">Smart Testing.</p>
+                <p className="text-muted-foreground">AI that finds your weak spots before the exam does.</p>
               </div>
-              <p className="font-semibold">Smart Testing.</p>
-              <p className="text-muted-foreground">AI that finds your weak spots before the exam does.</p>
             </CardContent>
           </BentoCard>
 
