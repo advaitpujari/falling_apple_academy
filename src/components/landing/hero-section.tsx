@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import { getPlaceholderImage } from '@/lib/placeholder-images';
 
 export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -8,19 +9,31 @@ export function HeroSection() {
   const textContainerRef = useRef<HTMLDivElement>(null);
 
   const [videoDuration, setVideoDuration] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const posterImage = getPlaceholderImage('hero-background');
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
+    const handleCanPlay = () => {
+      setIsLoaded(true);
+    };
+
     const handleMetadata = () => {
       setVideoDuration(video.duration);
       video.currentTime = 0;
     };
-
+    
     video.addEventListener('loadedmetadata', handleMetadata);
+    video.addEventListener('canplay', handleCanPlay);
+
     if (video.readyState >= 1) {
       handleMetadata();
+    }
+    if (video.readyState >= 3) {
+      handleCanPlay();
     }
 
     const handleScroll = () => {
@@ -42,8 +55,10 @@ export function HeroSection() {
       const translateY = 100 * (1 - textProgress);
       const opacity = textProgress;
       
-      textContainer.style.transform = `translateY(${translateY}%)`;
-      textContainer.style.opacity = `${opacity}`;
+      if (textContainer) {
+        textContainer.style.transform = `translateY(${translateY}%)`;
+        textContainer.style.opacity = `${opacity}`;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -53,20 +68,24 @@ export function HeroSection() {
       window.removeEventListener('scroll', handleScroll);
       if (video) {
         video.removeEventListener('loadedmetadata', handleMetadata);
+        video.removeEventListener('canplay', handleCanPlay);
       }
     };
   }, [videoDuration]);
 
   return (
     <section ref={sectionRef} className="relative w-full" style={{ height: '300vh' }}>
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black">
         <video
           ref={videoRef}
           src="https://jee-data.s3.ap-south-1.amazonaws.com/The_scene_opens_1080p_202601301515-ezgif.com-cut.webp"
           muted
           playsInline
           preload="metadata"
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          poster={posterImage?.imageUrl}
+          type="video/webm"
+          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
+          style={{ opacity: isLoaded ? 1 : 0 }}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div 
