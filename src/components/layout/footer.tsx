@@ -6,9 +6,8 @@ export function Footer() {
     <footer className="bg-background border-t border-white/10 py-12">
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4 text-sm">
         <div className="col-span-2 md:col-span-1 space-y-4">
-          <Link href="/" className="flex items-center gap-2 text-foreground font-semibold">
-            <FallingAppleLogo className="h-6 w-6" />
-            <span>The Falling Apple</span>
+          <Link href="/" className="text-foreground font-semibold text-lg">
+            Falling Apple Academy
           </Link>
           <p className="text-muted-foreground">
             Revolutionizing physics education with concept-first methodology.
@@ -43,7 +42,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-12 border-t border-border pt-8 px-4 flex justify-between items-center text-muted-foreground text-xs">
-        <p>&copy; {new Date().getFullYear()} The Falling Apple. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Falling Apple Academy. All rights reserved.</p>
         <p>Physics by Swarupanand.</p>
       </div>
     </footer>

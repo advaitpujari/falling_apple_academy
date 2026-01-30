@@ -13,9 +13,8 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/10">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <FallingAppleLogo className="h-6 w-6 text-foreground" />
-          <span className="sr-only">The Falling Apple</span>
+        <Link href="/" className="text-xl font-semibold text-foreground">
+          Falling Apple Academy
         </Link>
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-8">

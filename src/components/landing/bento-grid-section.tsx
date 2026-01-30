@@ -45,7 +45,7 @@ export function BentoGridSection() {
             </CardContent>
           </BentoCard>
 
-          <BentoCard id="ai-test" className="md:col-span-2">
+          <BentoCard id="ai-test" className="md:col-span-2 group">
             <CardHeader className="p-8">
               <CardTitle className="text-2xl font-bold">AI Test Series</CardTitle>
             </CardHeader>
@@ -55,7 +55,7 @@ export function BentoGridSection() {
                     src="https://jee-data.s3.ap-south-1.amazonaws.com/falling_apple_academy_website/test_series_image.png"
                     alt="AI Test Series"
                     fill
-                    className="object-contain"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
               </div>
               <p className="font-semibold">Smart Testing.</p>
