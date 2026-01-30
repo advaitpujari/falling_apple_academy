@@ -78,12 +78,12 @@ export function HeroSection() {
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black">
         <video
           ref={videoRef}
-          src="https://jee-data.s3.ap-south-1.amazonaws.com/The_scene_opens_1080p_202601301515-ezgif.com-cut.webp"
+          src="https://jee-data.s3.ap-south-1.amazonaws.com/The_scene_opens_1080p_202601301515.mp4"
           muted
           playsInline
           preload="metadata"
           poster={posterImage?.imageUrl}
-          type="video/webm"
+          type="video/mp4"
           className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
           style={{ opacity: isLoaded ? 1 : 0 }}
         />
